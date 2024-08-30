@@ -1,38 +1,36 @@
-This is a NextAuth with AWS Cognito Email & Google Sign in sample code<br/>
-blog: (https://dev.to/dango0812/nextauth-with-aws-cognito-email-google-sign-in-5ef6).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-1. Please modify the contents of the env file first. (AWS Cognito environment setup)
-```
-AWS_COGNITO_CLIENT_ID=
-AWS_COGNITO_UESRPOOL_ID=
-AWS_COGNITO_ISSUER=
-AWS_COGNITO_DOMAIN=
-NEXTAUTH_URL=
-NEXTAUTH_SECRET=
-```
-NEXTAUTH_SECRET use uuid4 or your secret key<br/>
-uuid online create: https://www.uuidgenerator.net/version4
+First, run the development server:
 
-2. Configure the callback URL and OpenID Connect scope in the AWS Cognito Userpool
-```
-Callback url: http://localhost:3000/api/auth/callback/cognito
-localhost or your domain
-
-OpenID Connect: openid, email, profile, aws.cognito.signin.user.admin
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-3. If you are using the AWS Cognito clientSecret key, you need to update the null value for clientSecret in NextAuth Route to your own.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-I wrote this code for NextAuth with AWS Cognito for email & Google because there wasn't much information available. 
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-You can find a more detailed explanation on my blog. 
+## Learn More
 
-Since this is a sample code, it's written very simply, and the code is not yet organized. 
+To learn more about Next.js, take a look at the following resources:
 
-I plan to refactor it after completing the TypeScript part. 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Thank you. 🫠
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
