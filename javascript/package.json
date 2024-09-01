@@ -11,6 +11,7 @@
     "lint:fix": "eslint app --ext .js,.jsx,.ts,.tsx,.d.ts --fix",
     "prettier": "prettier --write 'app/**/*.{js,jsx,ts,tsx}'"
   },
+  "type": "module",
   "dependencies": {
     "@aws-sdk/client-cognito-identity-provider": "3.521.0",
     "next": "14.2.7",

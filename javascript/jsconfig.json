@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "CommonJS",
     "paths": {
       "app/*": ["./app/*"]
     }
