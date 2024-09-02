@@ -6,6 +6,8 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 // components
 import SignInInputField from "app/sign-in/components/SignInInputField";
+// routes
+import { paths } from "app/routes";
 
 export default function SignInForm() {
     const [formSchema, setFormSchema] = useState({
@@ -22,10 +24,45 @@ export default function SignInForm() {
 
     const handleSubmit = async(event, data) => {
         event.preventDefault();
+        
+        if (data.email === "" || data.password === "")
+            return;
+
+        const response = await signIn("credentials", {
+            email: data.email,
+            password: data.password,
+            redirect: true,
+            callbackUrl: paths.dashboard
+        });
+
+        /*
+            * sign in success response
+            {
+                "error": null,
+                "status": 200,
+                "ok": true,
+                "url": "http://localhost:3000/sign-in/"
+            }
+            
+            * sign in error response
+            url : https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-cognito-identity-provider
+            {
+                "error": "error type",
+                "status": error status code,
+                "ok": false,
+                "url": null
+            }
+        */
+        console.log("response", response)
     };
 
     const handleGoogleSignIn = () => {
-        signIn("cognito")
+        signIn("cognito");
+        /*
+            When using aws-sdk with nextauth for Google login, redirect after login is not handled.
+            There is a related issue in nextauth issue, but it says that nextauth only handles callbacks from cognito.
+            I need to implement so that nextauth session detects google login and redirects using useEffect.
+         */
     };
 
     return (
