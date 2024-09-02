@@ -94,7 +94,6 @@ async function auth(req, res) {
                                             userInfo[key] = attribute.Value;
                                         })
                                         
-                                        console.log(userInfo)
                                         resolve(userInfo);
                                     }
                                 });
@@ -103,7 +102,22 @@ async function auth(req, res) {
                     });
                 },
             })
-        ]
+        ],
+        callbacks: {
+            async jwt({ token, user }) {
+                return {
+                    ...token,
+                    ...user
+                }
+            },
+            async session({ session, token, user }) {
+                return {
+                    name: session.user.name,
+                    email: session.user.email,
+                    ...token
+                }
+            }
+        }
     });
 }
 
