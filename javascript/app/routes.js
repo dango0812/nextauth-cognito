@@ -7,5 +7,7 @@ export const domains = {
 };
 
 export const paths = {
-    signIn: "/sign-in"
+    main: "/",
+    signIn: "/sign-in",
+    dashboard: "/dashboard"
 };

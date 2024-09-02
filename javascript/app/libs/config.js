@@ -1,4 +1,5 @@
-import { domains, paths } from "app/paths";
+// routes
+import { domains, paths } from "app/routes";
 
 export const MENU_ITEM_LIST = [
   {
