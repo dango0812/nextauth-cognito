@@ -23,7 +23,7 @@ uuid online create: https://www.uuidgenerator.net/version4
 
 ### Configure the callback URL and OpenID Connect scope in the AWS Cognito Userpool
 ```
-Email Callback url: http://localhost:3000
+Email Callback url: http://localhost:3000/sign-in
 OpenID Callback url: http://localhost:3000/api/auth/callback/cognito
 localhost or your domain
 
