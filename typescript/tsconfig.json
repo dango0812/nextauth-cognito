@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    /* Modules */
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "app/*": [
+        "./*",
+        "app/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    /* Type Checking */
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    /* Language and Environment */
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "esnext.asynciterable"
+    ],
+    "target": "es6",
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    /* Emit */
+    "declaration": true,
+    "downlevelIteration": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+    /* Completeness */
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    /* Editor Support */
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "app/**/*",
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
