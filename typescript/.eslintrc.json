@@ -29,8 +29,7 @@
     "@typescript-eslint",
     "import",
     "react",
-    "react-hooks",
-    "@emotion"
+    "react-hooks"
   ],
 
   "settings": {
