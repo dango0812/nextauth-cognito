@@ -13,6 +13,7 @@ export default function HomeItemCard({
             className="p-4 border rounded border-gray-300 hover:border-purple-500"
             href={link}
             target={openNewTab ? "_blank" : "_self"}
+            rel="noopener, noreferrer"
         >
             <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-start gap-4">
