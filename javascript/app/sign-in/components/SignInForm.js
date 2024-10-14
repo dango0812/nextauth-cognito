@@ -25,8 +25,9 @@ export default function SignInForm() {
     const handleSubmit = async(event, data) => {
         event.preventDefault();
         
-        if (data.email === "" || data.password === "")
+        if (data.email === "" || data.password === "") {
             return;
+        }
 
         const response = await signIn("credentials", {
             email: data.email,

@@ -8,8 +8,9 @@ import { paths } from "app/routes";
 export default function DashboardPage() {
     const { data, status } = useSession();
 
-    if (status === "loading")
+    if (status === "loading") {
         return null;
+    }
 
     const handleSignOut = () => {
         signOut({
