@@ -1,8 +1,12 @@
+// next
+import Image from "next/image";
+
 export default function SignInHero() {
     return (
         <div className="w-full max-w-md flex flex-row justify-start items-center gap-4">
-            <img
-                className="w-7 h-7"
+            <Image
+                width={28}
+                height={28}
                 src="/assets/img-nextauth-logo.png"
                 alt="logo"
                 loading="lazy"
