@@ -110,7 +110,7 @@ async function auth(req, res) {
                     ...user
                 }
             },
-            async session({ session, token, user }) {
+            async session({ session, token }) {
                 return {
                     name: session.user.name,
                     email: session.user.email,
