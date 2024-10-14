@@ -17,6 +17,8 @@
 </p>
 <br/>
 
+![0904011749281802](https://github.com/user-attachments/assets/cbd1082d-7725-49cf-a4fb-7987ab5a5d16)
+
 ## (1) NextAuth & AWS Cognito env setup
 ```
 NEXTAUTH_URL=
