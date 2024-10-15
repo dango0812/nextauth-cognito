@@ -43,10 +43,8 @@ OpenID callback url: {your domain}/api/auth/callback/cognito
 <br/>
 
 ### (3) Configure the OpenID Connect scope in the AWS Cognito Userpool
-```
-OpenID Connect scope: openid, email, profile, phone, aws.cognito.signin.user.admin
-Please modify the authorization -> scope in the api/auth/[...nextauth] file after setting it up for your environment
-```
+AWS Cognito Userpool OpenID Connect Scope Types: ```openid```, ```email```, ```profile```, ```phone```, ```aws.cognito.signin.user.admin``` <br/>
+Please modify the authorization -> scope in the api/auth/[...nextauth] file after setting it up for your environment <br/>
 💡 If you are using an AWS Cognito client secret key, use the secret key value provided by Cognito instead of null
 <br/>
 
